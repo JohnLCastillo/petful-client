@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { catReducer } from "../reducers/cat";
-import { dogReducer } from "../reducers/dog";
+import { catReducer } from "../reducers/catReducer";
+import { dogReducer } from "../reducers/dogReducer";
 export * from "./dog";
 export * from "./cat";
 

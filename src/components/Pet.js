@@ -1,5 +1,5 @@
 import React from 'react';
-import title from './title';
+import Title from './Title';
 import Button from './Button';
 
 
@@ -14,7 +14,7 @@ export default function Pet(props){
  let noneLeft = <p id='none-left'>{props.info.message}</p>
 return (
     <section>
-      {props.info.message ? null : <Header animalName={props.info.name} imageURL={props.info.imageURL} imageAlt={props.info.imageDescription} />}
+      {props.info.message ? null : <Title animalName={props.info.name} imageURL={props.info.imageURL} imageAlt={props.info.imageDescription} />}
       <main>
         {props.info.message ? noneLeft : details}
       </main>

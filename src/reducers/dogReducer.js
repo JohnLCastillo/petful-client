@@ -5,7 +5,7 @@ import {
   ADOPT_DOG_REQUEST,
   ADOPT_DOG_SUCCESS,
   ADOPT_DOG_ERROR
-} from "../actions";
+} from "../actions/dog";
 
 const initialState = {
   data: null,

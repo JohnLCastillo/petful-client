@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Spinner from "react-spinkit";
 import Pet from "./Pet";
 import About from "./About";
-import { fetchDog, fetchCat, adoptCat, adoptDog } from "../actions/index";
+import { fetchDog, fetchCat, adoptCat, adoptDog } from "../actions/combine";
 
 export class Dashboard extends Component {
   constructor(props) {
@@ -26,16 +25,10 @@ export class Dashboard extends Component {
   }
 
   renderData() {
-    if (this.props.catToAdopt.loading || this.props.dogToAdopt.loading) {
-      return (
-        <Spinner
-          id="spinner"
-          name="ball-pulse-rise"
-          color="red"
-          fadeIn="none"
-        />
-      );
-    }
+    if (this.props.catToAdopt.loading || this.props.dogToAdopt.loading){
+      return <p>Loading</p>
+    } 
+  
     if (this.props.catToAdopt.error || this.props.dogToAdopt.error) {
       return (
         <p>{this.props.catToAdopt.error || this.props.dogToAdopt.error}</p>
