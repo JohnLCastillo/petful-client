@@ -4,7 +4,6 @@ import Spinner from "react-spinkit";
 import Pet from "./Pet";
 import About from "./About";
 import { fetchDog, fetchCat, adoptCat, adoptDog } from "../actions/index";
-import "./Dashboard.css";
 
 export class Dashboard extends Component {
   constructor(props) {
@@ -50,12 +49,12 @@ export class Dashboard extends Component {
         <h1 className="main-header">Adoption Bank</h1>
         <About />
         {this.renderData()}
-        <Petinfo
+        <Pet
           info={this.props.catToAdopt}
           buttonText="Adopt Cat"
           onAdoptPet={this.handleAdoptCat}
         />
-        <Petinfo
+        <Pet
           info={this.props.dogToAdopt}
           buttonText="Adopt Dog"
           onAdoptPet={this.handleAdoptDog}
