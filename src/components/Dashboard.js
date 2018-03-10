@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Pet from "./Pet";
 import About from "./About";
 import { fetchDog, fetchCat, adoptCat, adoptDog } from "../actions/combine";
+import './Dashboard.css'
 
 export class Dashboard extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ export class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h1 className="main-header">Adoption Bank</h1>
+        <h1 className="main-header">In need of adoption</h1>
         <About />
         {this.renderData()}
         <Pet

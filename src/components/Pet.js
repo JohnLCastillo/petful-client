@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import Button from './Button';
-
+import './Pet.css';
 
 export default function Pet(props){
   let details = <ul className='detail-list'>

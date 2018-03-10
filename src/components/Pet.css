@@ -1,0 +1,16 @@
+img {
+  width: 20%;
+  height: 20%;
+}
+
+section {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
